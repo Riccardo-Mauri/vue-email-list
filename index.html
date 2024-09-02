@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,26 @@
     <!--LINK CSS-->
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
+    <div id="app">
+        <h1> {{title}}</h1>
+        <ul>
+            <li v-for="(email, index) in emails" :key="index">
+                {{email}}
+            </li>
+        </ul>
+
+    </div>
+
+
+
+    <!--LINK AXIOS-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!--LINK VUE-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!--LINK MY JS-->
     <script src="./js/scripts.js"></script>
 </body>
+
 </html>
